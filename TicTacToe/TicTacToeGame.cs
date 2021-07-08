@@ -16,36 +16,14 @@ namespace TicTacToe
             }
             return board;
         }
-        public void ToStartGame()
+       
+        public char ChooseXorO()
         {
-            Random random = new Random();
-            int player = random.Next(0, 2);
-            if(player==1)
-            {
-                Console.WriteLine("Player starts a game");
-
-            }
-            else
-            {
-                Console.WriteLine("Computer starts a game");
-            }
-        }
-        public void ChooseXorO()
-        {
-            Console.WriteLine("Choose a letter either X or O");
+            Console.WriteLine("Choose a letter either X or O for player input");
             char playerChoice = Convert.ToChar(Console.ReadLine());
             char computerChoice=' ';
-            if (playerChoice.Equals('X'))
-            {
-                computerChoice = 'O';
-            }
-            else
-            {
-                computerChoice = 'X';
-            }
-            Console.WriteLine("Player has choosen : "+playerChoice);
-            Console.WriteLine("Computer has choosen: "+computerChoice);
-            
+            computerChoice = (playerChoice == 'X') ? 'O' : 'X';
+            return computerChoice;
         }
     }
 }
