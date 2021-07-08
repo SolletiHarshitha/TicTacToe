@@ -7,10 +7,10 @@ namespace TicTacToe
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to TicTacToe Game");
-           TicTacToeGame uc1=new TicTacToeGame();
-            char [] printBoard=uc1.CreateBoard();
+           TicTacToeGame game=new TicTacToeGame();
+            char [] printBoard=game.CreateBoard();
             
-            char computerValue=uc1.ChooseXorO();
+            char computerValue=game.ChooseXorO();
             Console.WriteLine("Computer value is :"+computerValue);
             
         }
