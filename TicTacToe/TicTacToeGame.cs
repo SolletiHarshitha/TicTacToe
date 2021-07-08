@@ -10,7 +10,7 @@ namespace TicTacToe
         public  char[] CreateBoard()
         {
             board = new char[10];
-            for(int i = 1; i < 10; i++)
+            for(int i = 1; i < board.Length; i++)
             {
                 board[i] = ' ';
             }
@@ -33,18 +33,18 @@ namespace TicTacToe
         public void ChooseXorO()
         {
             Console.WriteLine("Choose a letter either X or O");
-            char playerLetter = Convert.ToChar(Console.ReadLine());
-            char computerLetter=' ';
-            if (playerLetter.Equals('X'))
+            char playerChoice = Convert.ToChar(Console.ReadLine());
+            char computerChoice=' ';
+            if (playerChoice.Equals('X'))
             {
-                computerLetter = 'O';
+                computerChoice = 'O';
             }
             else
             {
-                computerLetter = 'X';
+                computerChoice = 'X';
             }
-            Console.WriteLine("Player has choosen : "+playerLetter);
-            Console.WriteLine("Computer has choosen: "+computerLetter);
+            Console.WriteLine("Player has choosen : "+playerChoice);
+            Console.WriteLine("Computer has choosen: "+computerChoice);
             
         }
     }
