@@ -9,8 +9,10 @@ namespace TicTacToe
             Console.WriteLine("Welcome to TicTacToe Game");
            TicTacToeGame uc1=new TicTacToeGame();
             char [] printBoard=uc1.CreateBoard();
-            uc1.ToStartGame();
-            uc1.ChooseXorO();
+            
+            char computerValue=uc1.ChooseXorO();
+            Console.WriteLine("Computer value is :"+computerValue);
+            
         }
         
     }
