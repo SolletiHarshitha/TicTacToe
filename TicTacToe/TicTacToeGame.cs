@@ -21,8 +21,15 @@ namespace TicTacToe
         {
             Console.WriteLine("Choose a letter either X or O for player input");
             char playerChoice = Convert.ToChar(Console.ReadLine());
-            char computerChoice=' ';
-            computerChoice = (playerChoice == 'X') ? 'O' : 'X';
+            char computerChoice = ' ';
+            if (playerChoice != 'X' || playerChoice != 'O')
+            {
+                Console.WriteLine("Choose a valid input");
+            }
+            else
+            {
+                computerChoice = (playerChoice == 'X') ? 'O' : 'X';
+            }
             return computerChoice;
         }
     }
